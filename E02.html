@@ -8,12 +8,25 @@
     //Peça para o usuário informar o preço do Kg ou da Unidade de cada um dos produtos que comprou (citados acima) e peça também para o usuário informar quanto dinheiro possui para realizar a compra.
     //Calcule o custo total dos alimentos e verifique se há dinheiro suficiente para realizar a compra, indicando se sobrará ou faltará dinheiro, e também apresentando qual foi a quantia que sobrou ou faltou para realizar a compra. Apresente também na tela o valor total da compra.
 
-    //ENTRADA
+    const kk = Number(prompt("Informe o preço da unidade de Mamão").trim() .replace(",", "."));
+    const ll = Number(prompt("Informe o preço do Kg da Melancia").trim() .replace(",", "."));
+    const ff = Number(prompt("Informe o preço da unidade do Abacate").trim() .replace(",", "."));
+    const gg = Number(prompt("Informe o preço ddo Kg da Cebola").trim() .replace(",", "."));
+    const qq = Number(prompt("Informe quanto dinheiro possui para realizar a compra:").trim() .replace(",", "."));
 
+    const hh = (kk * 5) + (ll * 3) + (ff * 4) + (gg * 1.1);
+    const yy = qq - hh;
 
-    //PROCESSAMENTO
+    if (qq > hh) {
+        alert(`Irá sobrar ${yy.toFixed(2).replace(".", ",")} reais`);
+    }
 
+    else if (qq < hh) {
+        alert(`Vai faltar ${yy.toFixed(2).replace(".", ",")} reais`);
+    }
 
-    //SAÍDA
+    else{
+        alert(`É o mesmo valor`);
+    }
 
 </script>
